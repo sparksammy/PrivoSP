@@ -20,10 +20,10 @@
             return c;
         }
         if (getCookie("cururl") != getCookie("prevurl") && getCookie("prevurl") != null && getCookie("cururl") != null) {
-            if (document.referrer.includes("privosp://") == false || getcookie("prevurl").includes("privosp://") == false && window.location.href.includes("/privopages")) {
+            if (document.referrer.includes("ext+privosp://") == false || getcookie("prevurl").includes("ext+privosp://") == false && window.location.href.includes("/privopages")) {
                 window.location.href = redir
             }
-            if (document.referrer.includes("politics://") == false || getcookie("prevurl").includes("politics://") == false && window.location.href.includes("/privopages/politics")) {
+            if (document.referrer.includes("ext+politics://") == false || getcookie("prevurl").includes("ext+politics://") == false && window.location.href.includes("/privopages/politics")) {
                 window.location.href = redir
             }
         }

@@ -1,5 +1,35 @@
 
 <head>
+    <script type="text/javascript">
+        //Copyright Samuel Lord and Abdul Karim Kikar.
+       //Licensed under MIT license.
+       //In POC stage so far.
+       redir = "https://sparksammy.com" //Change me to what you want to redirect to on test fail.
+       //Ignore this! [BEGIN]
+       document.cookie = "cururl=" + window.location.href;
+       function getCookie(cname) {
+           dc = decodeURIComponent(document.cookie);
+           sp = dc.split(";")
+           for(var i = 0; i < sp.length; i++) {
+               c = sp[i];
+               while (c.charAt(0) == ' ') {
+                   c = c.substring(1);
+               }
+           }
+           c = c.replace(`${cname}=`, "")
+           return c;
+       }
+       if (getCookie("cururl") != getCookie("prevurl") && getCookie("prevurl") != null && getCookie("cururl") != null) {
+           if (document.referrer.includes("ext+privosp://") == false || getcookie("prevurl").includes("ext+privosp://") == false && window.location.href.includes("/privopages")) {
+               window.location.href = redir
+           }
+           if (document.referrer.includes("ext+politics://") == false || getcookie("prevurl").includes("ext+politics://") == false && window.location.href.includes("/privopages/politics")) {
+               window.location.href = redir
+           }
+       }
+       document.cookie = "prevurl=" + window.location.href;
+       //Ignore this! [END]
+   </script>
     <title>PrSP Tech Demo.</title>
 </head>
 <body>
