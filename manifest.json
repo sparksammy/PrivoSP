@@ -1,0 +1,14 @@
+{
+	"manifest_version": 2,
+	"name": "Privo Secure Protocol",
+	"version": "1.0",
+
+	"description": "A secure protocol.",
+
+
+	"background": [
+		{
+			"js": ["privosp.js"]
+		}
+	]
+}

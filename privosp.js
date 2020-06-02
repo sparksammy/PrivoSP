@@ -2,6 +2,7 @@
 //Licensed under MIT license.
 //In POC stage so far.
 //In firefox you need to set dom.no_unknown_protocol_error.enabled to false.
+while (1==1) {
 currentURL = window.location.href //Should always be at the very begining of the script.
 
 
@@ -19,3 +20,4 @@ if (location.protocol === "privosp:") {
     }
 }
 previousURL = window.location.href //Changed to current at the very end of the script, should always be at very bottom.
+}
