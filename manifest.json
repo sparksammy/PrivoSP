@@ -1,0 +1,17 @@
+{
+	"manifest_version": 2,
+	"name": "Privo Secure Protocol",
+	"version": "1.0",
+
+	"description": "A secure protocol.",
+
+	"icons" {
+		"48": "icons/border-48.png"
+	},
+
+	"content_scripts": [
+		{
+			matches: [*://*.*/*],
+			"js": ["privosp.js"]
+		}
+	]
