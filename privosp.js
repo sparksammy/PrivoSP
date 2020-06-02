@@ -6,15 +6,15 @@ while (1==1) {
 currentURL = window.location.href //Should always be at the very begining of the script.
 
 
-if (location.protocol === "privosp:") {
-    window.location.href = window.location.href.replace("privosp:", "http:") + "privopages/" 
-} else if (location.protocol === "politics:") {
-    window.location.href = window.location.href.replace("privosp:", "http:") + "privopages/politics" 
+if (location.protocol === "ext+privosp:") {
+    window.location.href = window.location.href.replace("ext+privosp", "http:") + "privopages/" 
+} else if (location.protocol === "ext+politics:") {
+    window.location.href = window.location.href.replace("ext+privosp", "http:") + "privopages/politics" 
 } else {
     if (window.history.length > 1 && currentURL != previousURL && previousURL != null) {
-        if (currentURL.protocol != "politics" && window.location.href.includes("/privopages/politics")) {
+        if (currentURL.protocol != "ext+politics" && window.location.href.includes("/privopages/politics")) {
             window.location.href = "https://sparksammy.com"
-        } else if (currentURL.protocol !== "privosp" && window.location.href.includes("/privopages")) {
+        } else if (currentURL.protocol !== "ext+privosp" && window.location.href.includes("/privopages")) {
             window.location.href = "https://sparksammy.com"
         }
     }
