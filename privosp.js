@@ -1,6 +1,7 @@
 //Copyright Samuel Lord and Abdul Karim Kikar.
 //Licensed under MIT license.
 //In POC stage so far.
+//In firefox you need to set dom.no_unknown_protocol_error.enabled to false.
 currentURL = window.location.href //Should always be at the very begining of the script.
 
 
